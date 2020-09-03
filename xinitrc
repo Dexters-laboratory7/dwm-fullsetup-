@@ -48,7 +48,14 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+# Executing the Dwm on the start of xorg server
 exec dwm &
-
+# Picom Configurator
 picom -f
+# Setting wallpaper to the desktop
+xwallpaper --zoom ~/Git/dwm-fullsetup-/wallpaper/641334.jpg
 
+
+while true; do
+	dwm > /dev/null 2>&1
+done
